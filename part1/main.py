@@ -1,5 +1,5 @@
 import requests 
-
+from bs4 import BeautifulSoup
 url = "https://www.geeksforgeeks.org/python-programming-language/"
 # make a get request
 r = requests.get(url)
@@ -8,4 +8,8 @@ r = requests.get(url)
 print(r)
 
 # print the content of request
-print(r.content)
+# print(r.content)
+
+# parsing the html
+soup = BeautifulSoup(r.content,'html.parser')
+print(soup.prettify())
