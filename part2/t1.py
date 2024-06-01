@@ -7,4 +7,8 @@ r = requests.get(url)
 soup = BeautifulSoup(r.text,"lxml")
 # print(soup.div.p)
 tag = soup.header 
-print(tag.attrs['role'])
+# print(tag.attrs['role'])
+li = tag.attrs['class']
+print(li)
+for l in li:
+    print(l)
