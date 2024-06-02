@@ -1,0 +1,19 @@
+[
+    {
+        "label": "extractHtml",
+        "importPath": "htmlExtractor",
+        "description": "htmlExtractor",
+        "isExtraImport": true,
+        "detail": "htmlExtractor",
+        "documentation": {}
+    },
+    {
+        "label": "soup",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "soup = extractHtml(\"https://ticker.finology.in/\",\"html.parser\")\nprint(soup)",
+        "detail": "test",
+        "documentation": {}
+    }
+]

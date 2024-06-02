@@ -1,0 +1,347 @@
+[
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
+        "label": "extractHtml",
+        "importPath": "htmlExtractor",
+        "description": "htmlExtractor",
+        "isExtraImport": true,
+        "detail": "htmlExtractor",
+        "documentation": {}
+    },
+    {
+        "label": "url",
+        "kind": 5,
+        "importPath": "d",
+        "description": "d",
+        "peekOfCode": "url = \"https://webscraper.io/test-sites/e-commerce/allinone/computers/tablets\"\n# response\nr = requests.get(url)\n# parse the html\nsoup = BeautifulSoup(r.text,\"html.parser\")\n# get the names,prices and description data\nproductsNames = soup.find_all(\"a\",class_=\"title\")\nproductPrices = soup.find_all(\"h4\",class_=\"price float-end card-title pull-right\")\nproductDes = soup.find_all(\"p\",class_=\"description card-text\")\n# make the list of the extracted data ",
+        "detail": "d",
+        "documentation": {}
+    },
+    {
+        "label": "r",
+        "kind": 5,
+        "importPath": "d",
+        "description": "d",
+        "peekOfCode": "r = requests.get(url)\n# parse the html\nsoup = BeautifulSoup(r.text,\"html.parser\")\n# get the names,prices and description data\nproductsNames = soup.find_all(\"a\",class_=\"title\")\nproductPrices = soup.find_all(\"h4\",class_=\"price float-end card-title pull-right\")\nproductDes = soup.find_all(\"p\",class_=\"description card-text\")\n# make the list of the extracted data \nproduct_names=[product_name.string for product_name in productsNames]\nprices = [price.string for price in productPrices]",
+        "detail": "d",
+        "documentation": {}
+    },
+    {
+        "label": "soup",
+        "kind": 5,
+        "importPath": "d",
+        "description": "d",
+        "peekOfCode": "soup = BeautifulSoup(r.text,\"html.parser\")\n# get the names,prices and description data\nproductsNames = soup.find_all(\"a\",class_=\"title\")\nproductPrices = soup.find_all(\"h4\",class_=\"price float-end card-title pull-right\")\nproductDes = soup.find_all(\"p\",class_=\"description card-text\")\n# make the list of the extracted data \nproduct_names=[product_name.string for product_name in productsNames]\nprices = [price.string for price in productPrices]\ndesc = [d.string for d in productDes]\ndf = pd.DataFrame({\"Product Names\":product_names,\"Prices\":prices,\"Description\":desc})",
+        "detail": "d",
+        "documentation": {}
+    },
+    {
+        "label": "productsNames",
+        "kind": 5,
+        "importPath": "d",
+        "description": "d",
+        "peekOfCode": "productsNames = soup.find_all(\"a\",class_=\"title\")\nproductPrices = soup.find_all(\"h4\",class_=\"price float-end card-title pull-right\")\nproductDes = soup.find_all(\"p\",class_=\"description card-text\")\n# make the list of the extracted data \nproduct_names=[product_name.string for product_name in productsNames]\nprices = [price.string for price in productPrices]\ndesc = [d.string for d in productDes]\ndf = pd.DataFrame({\"Product Names\":product_names,\"Prices\":prices,\"Description\":desc})\ndf.to_csv(\"tablets.csv\")",
+        "detail": "d",
+        "documentation": {}
+    },
+    {
+        "label": "productPrices",
+        "kind": 5,
+        "importPath": "d",
+        "description": "d",
+        "peekOfCode": "productPrices = soup.find_all(\"h4\",class_=\"price float-end card-title pull-right\")\nproductDes = soup.find_all(\"p\",class_=\"description card-text\")\n# make the list of the extracted data \nproduct_names=[product_name.string for product_name in productsNames]\nprices = [price.string for price in productPrices]\ndesc = [d.string for d in productDes]\ndf = pd.DataFrame({\"Product Names\":product_names,\"Prices\":prices,\"Description\":desc})\ndf.to_csv(\"tablets.csv\")",
+        "detail": "d",
+        "documentation": {}
+    },
+    {
+        "label": "productDes",
+        "kind": 5,
+        "importPath": "d",
+        "description": "d",
+        "peekOfCode": "productDes = soup.find_all(\"p\",class_=\"description card-text\")\n# make the list of the extracted data \nproduct_names=[product_name.string for product_name in productsNames]\nprices = [price.string for price in productPrices]\ndesc = [d.string for d in productDes]\ndf = pd.DataFrame({\"Product Names\":product_names,\"Prices\":prices,\"Description\":desc})\ndf.to_csv(\"tablets.csv\")",
+        "detail": "d",
+        "documentation": {}
+    },
+    {
+        "label": "prices",
+        "kind": 5,
+        "importPath": "d",
+        "description": "d",
+        "peekOfCode": "prices = [price.string for price in productPrices]\ndesc = [d.string for d in productDes]\ndf = pd.DataFrame({\"Product Names\":product_names,\"Prices\":prices,\"Description\":desc})\ndf.to_csv(\"tablets.csv\")",
+        "detail": "d",
+        "documentation": {}
+    },
+    {
+        "label": "desc",
+        "kind": 5,
+        "importPath": "d",
+        "description": "d",
+        "peekOfCode": "desc = [d.string for d in productDes]\ndf = pd.DataFrame({\"Product Names\":product_names,\"Prices\":prices,\"Description\":desc})\ndf.to_csv(\"tablets.csv\")",
+        "detail": "d",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "d",
+        "description": "d",
+        "peekOfCode": "df = pd.DataFrame({\"Product Names\":product_names,\"Prices\":prices,\"Description\":desc})\ndf.to_csv(\"tablets.csv\")",
+        "detail": "d",
+        "documentation": {}
+    },
+    {
+        "label": "url",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "url = \"https://www.wstech.com/\"\nr = requests.get(url)\nsoup = BeautifulSoup(r.text,'html.parser')\n# print(soup)\nt = (soup.find(\"div\",class_=\"et_pb_text_inner\"))\nprint(t.string)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "r",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "r = requests.get(url)\nsoup = BeautifulSoup(r.text,'html.parser')\n# print(soup)\nt = (soup.find(\"div\",class_=\"et_pb_text_inner\"))\nprint(t.string)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "soup",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "soup = BeautifulSoup(r.text,'html.parser')\n# print(soup)\nt = (soup.find(\"div\",class_=\"et_pb_text_inner\"))\nprint(t.string)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "t",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "t = (soup.find(\"div\",class_=\"et_pb_text_inner\"))\nprint(t.string)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "fetchHtml",
+        "kind": 2,
+        "importPath": "n",
+        "description": "n",
+        "peekOfCode": "def fetchHtml(webiste,parser):\n    url = webiste\n    r = requests.get(url)\n    soup_data = BeautifulSoup(r.text,parser)\n    return soup_data\nsoup = fetchHtml(\"https://ticker.finology.in/\",\"html.parser\")\nprint(soup.prettify())",
+        "detail": "n",
+        "documentation": {}
+    },
+    {
+        "label": "soup",
+        "kind": 5,
+        "importPath": "n",
+        "description": "n",
+        "peekOfCode": "soup = fetchHtml(\"https://ticker.finology.in/\",\"html.parser\")\nprint(soup.prettify())",
+        "detail": "n",
+        "documentation": {}
+    },
+    {
+        "label": "r",
+        "kind": 5,
+        "importPath": "p",
+        "description": "p",
+        "peekOfCode": "r = requests.get(url)\nsoup = BeautifulSoup(r.text,\"html.parser\")\nnames = soup.find_all(string=re.compile(\"Idea\"))\nprint(len(names))\nall_n = [name.string for name in names]\nprint(all_n)",
+        "detail": "p",
+        "documentation": {}
+    },
+    {
+        "label": "soup",
+        "kind": 5,
+        "importPath": "p",
+        "description": "p",
+        "peekOfCode": "soup = BeautifulSoup(r.text,\"html.parser\")\nnames = soup.find_all(string=re.compile(\"Idea\"))\nprint(len(names))\nall_n = [name.string for name in names]\nprint(all_n)",
+        "detail": "p",
+        "documentation": {}
+    },
+    {
+        "label": "names",
+        "kind": 5,
+        "importPath": "p",
+        "description": "p",
+        "peekOfCode": "names = soup.find_all(string=re.compile(\"Idea\"))\nprint(len(names))\nall_n = [name.string for name in names]\nprint(all_n)",
+        "detail": "p",
+        "documentation": {}
+    },
+    {
+        "label": "all_n",
+        "kind": 5,
+        "importPath": "p",
+        "description": "p",
+        "peekOfCode": "all_n = [name.string for name in names]\nprint(all_n)",
+        "detail": "p",
+        "documentation": {}
+    },
+    {
+        "label": "url",
+        "kind": 5,
+        "importPath": "t1",
+        "description": "t1",
+        "peekOfCode": "url = \"https://webscraper.io/test-sites/e-commerce/allinone/computers/tablets\"\nr = requests.get(url)\nsoup = BeautifulSoup(r.text,\"html.parser\")\nproducts = soup.find_all(\"a\",class_=\"title\")\nprices = soup.find_all(\"h4\",class_=\"price float-end card-title pull-right\")\ndesc = soup.find_all(\"p\",class_=\"description card-text\")\n# print(products)\n# for product in products:\n#     print(product.string)\n# for price in prices:",
+        "detail": "t1",
+        "documentation": {}
+    },
+    {
+        "label": "r",
+        "kind": 5,
+        "importPath": "t1",
+        "description": "t1",
+        "peekOfCode": "r = requests.get(url)\nsoup = BeautifulSoup(r.text,\"html.parser\")\nproducts = soup.find_all(\"a\",class_=\"title\")\nprices = soup.find_all(\"h4\",class_=\"price float-end card-title pull-right\")\ndesc = soup.find_all(\"p\",class_=\"description card-text\")\n# print(products)\n# for product in products:\n#     print(product.string)\n# for price in prices:\n#     print(price.string)",
+        "detail": "t1",
+        "documentation": {}
+    },
+    {
+        "label": "soup",
+        "kind": 5,
+        "importPath": "t1",
+        "description": "t1",
+        "peekOfCode": "soup = BeautifulSoup(r.text,\"html.parser\")\nproducts = soup.find_all(\"a\",class_=\"title\")\nprices = soup.find_all(\"h4\",class_=\"price float-end card-title pull-right\")\ndesc = soup.find_all(\"p\",class_=\"description card-text\")\n# print(products)\n# for product in products:\n#     print(product.string)\n# for price in prices:\n#     print(price.string)\n# for d in desc:",
+        "detail": "t1",
+        "documentation": {}
+    },
+    {
+        "label": "products",
+        "kind": 5,
+        "importPath": "t1",
+        "description": "t1",
+        "peekOfCode": "products = soup.find_all(\"a\",class_=\"title\")\nprices = soup.find_all(\"h4\",class_=\"price float-end card-title pull-right\")\ndesc = soup.find_all(\"p\",class_=\"description card-text\")\n# print(products)\n# for product in products:\n#     print(product.string)\n# for price in prices:\n#     print(price.string)\n# for d in desc:\n#     print(d.string)",
+        "detail": "t1",
+        "documentation": {}
+    },
+    {
+        "label": "prices",
+        "kind": 5,
+        "importPath": "t1",
+        "description": "t1",
+        "peekOfCode": "prices = soup.find_all(\"h4\",class_=\"price float-end card-title pull-right\")\ndesc = soup.find_all(\"p\",class_=\"description card-text\")\n# print(products)\n# for product in products:\n#     print(product.string)\n# for price in prices:\n#     print(price.string)\n# for d in desc:\n#     print(d.string)\nproduct_names = [product.string for product in products]",
+        "detail": "t1",
+        "documentation": {}
+    },
+    {
+        "label": "desc",
+        "kind": 5,
+        "importPath": "t1",
+        "description": "t1",
+        "peekOfCode": "desc = soup.find_all(\"p\",class_=\"description card-text\")\n# print(products)\n# for product in products:\n#     print(product.string)\n# for price in prices:\n#     print(price.string)\n# for d in desc:\n#     print(d.string)\nproduct_names = [product.string for product in products]\nproduct_prices = [price.string for price in prices]",
+        "detail": "t1",
+        "documentation": {}
+    },
+    {
+        "label": "product_names",
+        "kind": 5,
+        "importPath": "t1",
+        "description": "t1",
+        "peekOfCode": "product_names = [product.string for product in products]\nproduct_prices = [price.string for price in prices]\nproduct_desc = [ds.string for ds in desc]\ncsv_file='products.csv'\nwith open(csv_file,mode='w',newline=\"\",encoding=\"utf-8\") as f:\n    writer = csv.writer(f)\n    writer.writerow([\"Product_Name\",\"Price\",\"Description\"])\n    for name,price,dsc in zip(product_names,product_prices,product_desc):\n        writer.writerow([name,price,dsc])",
+        "detail": "t1",
+        "documentation": {}
+    },
+    {
+        "label": "product_prices",
+        "kind": 5,
+        "importPath": "t1",
+        "description": "t1",
+        "peekOfCode": "product_prices = [price.string for price in prices]\nproduct_desc = [ds.string for ds in desc]\ncsv_file='products.csv'\nwith open(csv_file,mode='w',newline=\"\",encoding=\"utf-8\") as f:\n    writer = csv.writer(f)\n    writer.writerow([\"Product_Name\",\"Price\",\"Description\"])\n    for name,price,dsc in zip(product_names,product_prices,product_desc):\n        writer.writerow([name,price,dsc])",
+        "detail": "t1",
+        "documentation": {}
+    },
+    {
+        "label": "product_desc",
+        "kind": 5,
+        "importPath": "t1",
+        "description": "t1",
+        "peekOfCode": "product_desc = [ds.string for ds in desc]\ncsv_file='products.csv'\nwith open(csv_file,mode='w',newline=\"\",encoding=\"utf-8\") as f:\n    writer = csv.writer(f)\n    writer.writerow([\"Product_Name\",\"Price\",\"Description\"])\n    for name,price,dsc in zip(product_names,product_prices,product_desc):\n        writer.writerow([name,price,dsc])",
+        "detail": "t1",
+        "documentation": {}
+    },
+    {
+        "label": "soup",
+        "kind": 5,
+        "importPath": "z",
+        "description": "z",
+        "peekOfCode": "soup = extractHtml(\"https://webscraper.io/test-sites/e-commerce/allinone/computers/tablets\",\"html.parser\")\nprint(soup)",
+        "detail": "z",
+        "documentation": {}
+    }
+]
