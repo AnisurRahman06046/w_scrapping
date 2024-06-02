@@ -15,4 +15,15 @@ headers = [header.text for header in table_header]
 #     print(i.text)
 
 df = pd.DataFrame(columns=headers)
-print(df)
+# print(df)
+
+rows = table.find_all("tr")
+
+for i in rows[1:]:
+    data = i.find_all("td")
+    row = [tr.text.strip() for tr in data]
+    l = len(df)
+    df.loc[l]=row
+    
+# print(df)
+df.to_csv("tablesData.csv")
