@@ -1,0 +1,162 @@
+[
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "url",
+        "kind": 5,
+        "importPath": "part1.main",
+        "description": "part1.main",
+        "peekOfCode": "url = \"https://www.geeksforgeeks.org/python-programming-language/\"\n# make a get request\nr = requests.get(url)\n# check status code for response received\nprint(r)\n# print the content of request\n# print(r.content)\n# parsing the html\nsoup = BeautifulSoup(r.content,'html.parser')\n# print(soup.prettify())",
+        "detail": "part1.main",
+        "documentation": {}
+    },
+    {
+        "label": "r",
+        "kind": 5,
+        "importPath": "part1.main",
+        "description": "part1.main",
+        "peekOfCode": "r = requests.get(url)\n# check status code for response received\nprint(r)\n# print the content of request\n# print(r.content)\n# parsing the html\nsoup = BeautifulSoup(r.content,'html.parser')\n# print(soup.prettify())\ns = soup.find(\"div\",class_=\"entry-content\")\ncontent = s.find_all(\"p\")",
+        "detail": "part1.main",
+        "documentation": {}
+    },
+    {
+        "label": "soup",
+        "kind": 5,
+        "importPath": "part1.main",
+        "description": "part1.main",
+        "peekOfCode": "soup = BeautifulSoup(r.content,'html.parser')\n# print(soup.prettify())\ns = soup.find(\"div\",class_=\"entry-content\")\ncontent = s.find_all(\"p\")\nprint(content)\nfor line in content:\n    print(line.text)",
+        "detail": "part1.main",
+        "documentation": {}
+    },
+    {
+        "label": "s",
+        "kind": 5,
+        "importPath": "part1.main",
+        "description": "part1.main",
+        "peekOfCode": "s = soup.find(\"div\",class_=\"entry-content\")\ncontent = s.find_all(\"p\")\nprint(content)\nfor line in content:\n    print(line.text)",
+        "detail": "part1.main",
+        "documentation": {}
+    },
+    {
+        "label": "content",
+        "kind": 5,
+        "importPath": "part1.main",
+        "description": "part1.main",
+        "peekOfCode": "content = s.find_all(\"p\")\nprint(content)\nfor line in content:\n    print(line.text)",
+        "detail": "part1.main",
+        "documentation": {}
+    },
+    {
+        "label": "url",
+        "kind": 5,
+        "importPath": "part1.practice",
+        "description": "part1.practice",
+        "peekOfCode": "url = \"https://authoraditiagarwal.com/\"\nr = requests.get(url)\nprint(r.text[:200])",
+        "detail": "part1.practice",
+        "documentation": {}
+    },
+    {
+        "label": "r",
+        "kind": 5,
+        "importPath": "part1.practice",
+        "description": "part1.practice",
+        "peekOfCode": "r = requests.get(url)\nprint(r.text[:200])",
+        "detail": "part1.practice",
+        "documentation": {}
+    },
+    {
+        "label": "url",
+        "kind": 5,
+        "importPath": "part2.main",
+        "description": "part2.main",
+        "peekOfCode": "url = 'https://www.wstech.com/'\nurl1 = ''\nr = requests.get(url)\nprint(r.status_code)\nprint(r.text)",
+        "detail": "part2.main",
+        "documentation": {}
+    },
+    {
+        "label": "url1",
+        "kind": 5,
+        "importPath": "part2.main",
+        "description": "part2.main",
+        "peekOfCode": "url1 = ''\nr = requests.get(url)\nprint(r.status_code)\nprint(r.text)",
+        "detail": "part2.main",
+        "documentation": {}
+    },
+    {
+        "label": "r",
+        "kind": 5,
+        "importPath": "part2.main",
+        "description": "part2.main",
+        "peekOfCode": "r = requests.get(url)\nprint(r.status_code)\nprint(r.text)",
+        "detail": "part2.main",
+        "documentation": {}
+    },
+    {
+        "label": "url",
+        "kind": 5,
+        "importPath": "part2.t1",
+        "description": "part2.t1",
+        "peekOfCode": "url = \"https://webscraper.io/test-sites/e-commerce/allinone/computers/tablets\"\nr = requests.get(url)\n# soup = BeautifulSoup(r.text,\"html.parser\")\nsoup = BeautifulSoup(r.text,\"lxml\")\n# print(soup.div.p)\n# tag = soup.header \n# # print(tag.attrs['role'])\n# li = tag.attrs['class']\n# print(li)\n# for l in li:",
+        "detail": "part2.t1",
+        "documentation": {}
+    },
+    {
+        "label": "r",
+        "kind": 5,
+        "importPath": "part2.t1",
+        "description": "part2.t1",
+        "peekOfCode": "r = requests.get(url)\n# soup = BeautifulSoup(r.text,\"html.parser\")\nsoup = BeautifulSoup(r.text,\"lxml\")\n# print(soup.div.p)\n# tag = soup.header \n# # print(tag.attrs['role'])\n# li = tag.attrs['class']\n# print(li)\n# for l in li:\n#     print(l)",
+        "detail": "part2.t1",
+        "documentation": {}
+    },
+    {
+        "label": "soup",
+        "kind": 5,
+        "importPath": "part2.t1",
+        "description": "part2.t1",
+        "peekOfCode": "soup = BeautifulSoup(r.text,\"lxml\")\n# print(soup.div.p)\n# tag = soup.header \n# # print(tag.attrs['role'])\n# li = tag.attrs['class']\n# print(li)\n# for l in li:\n#     print(l)\nprice = (soup.find(\"h4\",{\"class\":\"price float-end card-title pull-right\"}))\ntitle = (soup.find(\"a\",{\"class\":\"title\"}))",
+        "detail": "part2.t1",
+        "documentation": {}
+    },
+    {
+        "label": "price",
+        "kind": 5,
+        "importPath": "part2.t1",
+        "description": "part2.t1",
+        "peekOfCode": "price = (soup.find(\"h4\",{\"class\":\"price float-end card-title pull-right\"}))\ntitle = (soup.find(\"a\",{\"class\":\"title\"}))\nprint(price.string)\nprint(title.string)",
+        "detail": "part2.t1",
+        "documentation": {}
+    },
+    {
+        "label": "title",
+        "kind": 5,
+        "importPath": "part2.t1",
+        "description": "part2.t1",
+        "peekOfCode": "title = (soup.find(\"a\",{\"class\":\"title\"}))\nprint(price.string)\nprint(title.string)",
+        "detail": "part2.t1",
+        "documentation": {}
+    }
+]
